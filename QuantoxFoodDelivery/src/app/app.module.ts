@@ -6,13 +6,11 @@ import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SidenavComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

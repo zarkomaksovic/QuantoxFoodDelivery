@@ -20,6 +20,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatTabsModule,
     MatButtonModule,
     MatIconModule,
+    MatButtonModule,
     MatToolbarModule
   ]
 })
