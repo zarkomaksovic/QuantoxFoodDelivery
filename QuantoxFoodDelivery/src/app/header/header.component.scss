@@ -1,0 +1,19 @@
+.custom-header{
+  background-color: #93c433;
+  color: white;
+  .letter-color{
+    color: black;
+    font-weight: bold;
+  }
+
+  h3{
+    margin-top: 5px;
+  }
+
+  .button-position {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
