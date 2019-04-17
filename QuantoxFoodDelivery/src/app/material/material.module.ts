@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatButtonModule
   ],
-  exports:[
+  exports: [
     MatSidenavModule,
     MatButtonModule
   ]
