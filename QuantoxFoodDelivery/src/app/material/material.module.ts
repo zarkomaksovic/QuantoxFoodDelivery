@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTabsModule} from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -12,12 +13,14 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
+    MatTabsModule,
     MatButtonModule
   ],
   exports: [
-    MatSidenavModule,
-    MatButtonModule
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule
   ]
 })
 export class MaterialModule { }
