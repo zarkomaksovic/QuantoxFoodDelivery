@@ -6,11 +6,13 @@ import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
