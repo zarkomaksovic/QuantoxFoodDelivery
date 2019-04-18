@@ -1,13 +1,18 @@
-.restaurant-card{
-  border-radius: 5px;
-  border: 2px solid;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-
-img.image-responsive {
-  width: 150px;
-}
+.container{ 
+   align-items: center;
+   display: inline;
+  .restaurant-card{
+    border-radius: 10px;
+    border: 2px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px black;
+     img.image-responsive {
+      width: 150px;
+     }
+  }
+  
 }
 
