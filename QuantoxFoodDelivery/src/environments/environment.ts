@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyACcNQvIBx-cRsIre0_7mrWD6paFcL-OLk',
+    authDomain: 'quantoxfooddelivery.firebaseapp.com',
+    databaseURL: 'https://quantoxfooddelivery.firebaseio.com',
+    projectId: 'quantoxfooddelivery',
+    storageBucket: 'quantoxfooddelivery.appspot.com',
+    messagingSenderId: '458026484057'
+  }
 };
 
 /*

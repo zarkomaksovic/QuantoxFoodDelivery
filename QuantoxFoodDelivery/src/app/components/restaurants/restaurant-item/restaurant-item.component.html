@@ -1,16 +1,17 @@
 <div class="container">
-  <div class="row">
+  <div class="row" *ngFor="let restaurant of restaurants">
     <div class="col-3"></div>
-    <div class="col-6 restaurant-card" *ngFor="let restaurant of restaurants">
-      <div class="col-6">
-        <img [src]="restaurant.image" class="image-responsive " />
-      </div>
-      <div class='col-6'>
+    <div class="col-8 restaurant-card">
+      <!-- <img [src]="restaurant.image" class="image-responsive " /> -->
+      <div class="col-5">
         <h4>{{ restaurant.name }}</h4>
-        <p>{{ restaurant.adress }}</p>
-        <p>{{ restaurant.phone}}</p>
-        <p>{{ restaurant.description }}</p>
+        <p>Adresa: {{ restaurant.adress }}</p>
+        <p>Telefon: {{ restaurant.phone }}</p>
+        <p>Usluga: {{ restaurant.description }}</p>
       </div>
+      <ng-template #norestaurants>
+        No restaurants loaded!
+      </ng-template>
     </div>
     <div class="col-3"></div>
   </div>

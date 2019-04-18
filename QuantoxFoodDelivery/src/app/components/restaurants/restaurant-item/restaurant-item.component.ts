@@ -1,5 +1,7 @@
+import { RestaurantService } from './../../../services/restaurant.service';
 import { Component, OnInit } from '@angular/core';
-import { Restaurant } from '../restaurant.model';
+import { Restaurant } from 'src/app/models/restaurant';
+
 
 @Component({
   selector: 'app-restaurant-item',
@@ -7,12 +9,14 @@ import { Restaurant } from '../restaurant.model';
   styleUrls: ['./restaurant-item.component.scss']
 })
 export class RestaurantItemComponent implements OnInit {
-  restaurants: Restaurant[] = [
-    new Restaurant('DoJaja', './../../../assets/images/do_jaja.png', 'Kneza Milosa bb', 331588, 'fast food')
-  ];
-  constructor() { }
+  restaurants: Restaurant[];
+
+  constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit() {
+    this.restaurantService.getItems().subscribe(restaurants => {
+      this.restaurants = restaurants;
+    });
   }
 
 }

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -24,7 +27,9 @@ import { DisplayComponent } from './components/display/display.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase, 'QuantoxFoodDelivery')
   ],
   providers: [],
   bootstrap: [AppComponent]
