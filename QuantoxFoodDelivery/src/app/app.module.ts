@@ -6,11 +6,15 @@ import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { RestaurantItemComponent } from './components/restaurants/restaurant-item/restaurant-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    RestaurantsComponent,
+    RestaurantItemComponent
   ],
   imports: [
     BrowserModule,

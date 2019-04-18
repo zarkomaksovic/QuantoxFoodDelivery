@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-8 restaurant-card"
+      *ngFor="let restaurant of restaurants"
+    >
+
+        <img [src]="restaurant.image" class="image-responsive " />
+        <div class='col-5'>
+          <h4>{{ restaurant.name }}</h4>
+          <p>{{ restaurant.adress }}</p>
+          <p>{{ restaurant.phone}}</p>
+          <p>{{ restaurant.description }}</p>
+        </div>
+
+    </div>
+  </div>
+</div>
