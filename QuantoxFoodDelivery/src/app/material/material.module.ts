@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
 
 
 @NgModule({
@@ -17,7 +17,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatButtonModule
   ],
   exports: [
-    MatSidenavModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
     MatButtonModule,
     MatToolbarModule
   ]
