@@ -24,3 +24,20 @@
 
 }
 
+
+
+.example-card {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+  background-color: #ffffff4f;
+}
+
+.example-header-image {
+  // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
