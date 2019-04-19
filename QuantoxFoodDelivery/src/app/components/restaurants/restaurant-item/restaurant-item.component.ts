@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { RestaurantService } from './../../../services/restaurant.service';
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant';
@@ -11,13 +12,19 @@ import { Restaurant } from 'src/app/models/restaurant';
 export class RestaurantItemComponent implements OnInit {
   restaurants: Restaurant[];
 
-  constructor(private restaurantService: RestaurantService) { }
+  constructor(
+    private restaurantService: RestaurantService,
+    private route: ActivatedRoute,
+    private router: Router
+    ) { }
 
   ngOnInit() {
     this.restaurantService.getItems().subscribe(restaurants => {
-      console.log(123213, restaurants)
       this.restaurants = restaurants;
     });
+  }
+  showMenu(){
+    this.router.navigate(['menu'], {relativeTo: this.route});
   }
 
 }

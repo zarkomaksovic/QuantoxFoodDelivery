@@ -10,6 +10,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTableModule} from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
@@ -28,7 +31,10 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatToolbarModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
