@@ -1,10 +1,7 @@
 import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument } from '@angular/fire/firestore';
+  AngularFirestore } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
 import { Restaurant } from '../models/restaurant';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 
@@ -13,28 +10,23 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class RestaurantService {
-  restaurantsCollection: AngularFirestoreCollection<Restaurant>;
-  restaurants: Observable<Restaurant[]>;
-  restaurantDoc: AngularFirestoreDocument<Restaurant>;
 
   constructor(
     public afs: AngularFirestore
-  ) {
-    this.restaurantsCollection = this.afs.collection('restorani');
-    this.restaurants = this.restaurantsCollection
+  ) {}
+
+   getItems() {
+    return this.afs.collection('restorani')
     .snapshotChanges()
     .pipe(
       map(changes => {
         return changes.map(a => {
           const data = a.payload.doc.data() as Restaurant;
-          data.id = a.payload.doc.id;
-          return data;
+          const id = a.payload.doc.id;
+          return {id, ...data};
         });
       })
     );
-   }
-   getItems() {
-    return this.restaurants;
   }
 }
 

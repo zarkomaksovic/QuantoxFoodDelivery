@@ -1,16 +1,24 @@
 .container{
    align-items: center;
    display: inline;
+   .row{
+    margin: 0;
+  }
   .restaurant-card{
     border-radius: 10px;
-    border: 2px solid;
+    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    color: white;
     text-shadow: 1px 1px 1px black;
+    p{
+      margin: 0;
+    }
      img.image-responsive {
-      width: 150px;
+      width: 100px;
+      border-radius: 50%;
      }
   }
 

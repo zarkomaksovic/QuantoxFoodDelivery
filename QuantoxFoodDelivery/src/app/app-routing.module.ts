@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RestaurantItemComponent } from './components/restaurants/restaurant-item/restaurant-item.component';
+import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { HistoryComponent } from './components/history/history.component';
 
 const routes: Routes = [
-  {path:"restaurants", component: RestaurantItemComponent},
+  {path:"restaurants", component: RestaurantsComponent},
   {path:"orders", component:OrdersComponent},
   {path:"history", component: HistoryComponent},
   {path:"",
@@ -19,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[ RestaurantItemComponent, OrdersComponent, HistoryComponent];
+export const routingComponents=[ RestaurantsComponent, OrdersComponent, HistoryComponent];
