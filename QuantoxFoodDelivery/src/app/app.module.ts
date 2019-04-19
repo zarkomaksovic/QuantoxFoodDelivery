@@ -12,7 +12,7 @@ import { RestaurantsComponent } from './components/restaurants/restaurants.compo
 import { RestaurantItemComponent } from './components/restaurants/restaurant-item/restaurant-item.component';
 import { DisplayComponent } from './components/display/display.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
