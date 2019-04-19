@@ -26,11 +26,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
-  // ngOnInit(): void {
-  //   throw new Error("Method not implemented.");
-  // }
-  displayedColumns: string[] = ['position', 'weight','price'];
+export class MenuComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
+  displayedColumns: string[] = ['position','price'];
   dataSource = ELEMENT_DATA;
 
 }
