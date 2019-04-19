@@ -30,7 +30,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     throw new Error("Method not implemented.");
   }
-  displayedColumns: string[] = ['position', 'weight','price'];
+  displayedColumns: string[] = ['position','price'];
   dataSource = ELEMENT_DATA;
   
 }
