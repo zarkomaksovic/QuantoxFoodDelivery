@@ -8,28 +8,36 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { TabsComponent } from './components/tabs/tabs.component';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { RestaurantItemComponent } from './components/restaurants/restaurant-item/restaurant-item.component';
 import { DisplayComponent } from './components/display/display.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    TabsComponent,
     RestaurantsComponent,
     RestaurantItemComponent,
     routingComponents,
-    DisplayComponent
+    DisplayComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase, 'QuantoxFoodDelivery')
+    AngularFireModule.initializeApp(environment.firebase, 'QuantoxFoodDelivery'),
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

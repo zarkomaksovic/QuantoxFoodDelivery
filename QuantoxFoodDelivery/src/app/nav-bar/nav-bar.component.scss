@@ -1,0 +1,55 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.letter-color{
+  font-size: 3rem;
+  color: black;
+
+}
+button:focus{
+  outline: none;
+}
+.button-position {
+  margin-right: 30px;
+}
+
+mat-toolbar {
+  background: #96ca3a;
+  color: white;
+   h3{
+    text-shadow: 2px 2px 5px white;
+    font-size: 2rem;
+    }  
+}
+.sidenav-container {
+  height: 100%;
+  background-image: url(../../assets/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidenav {
+  width: 300px;
+  background: #96ca3a;
+  color: white;
+  mat-nav-list{
+    border-top: 2px solid white;
+    a{
+      color: white;
+      font-size: 20px;
+    }
+  }
+}
+
+.sidenav {
+  .mat-toolbar{
+    background: inherit;
+
+  }
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
