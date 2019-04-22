@@ -9,7 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-import { MatExpansionModule, MatTableModule, MatCheckboxModule, MatFormField, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatExpansionModule, MatTableModule, MatCheckboxModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 
 @NgModule({
