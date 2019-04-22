@@ -9,7 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-import { MatExpansionModule, MatTableModule, MatCheckboxModule } from '@angular/material';
+import { MatExpansionModule, MatTableModule, MatCheckboxModule, MatFormField, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 
 @NgModule({
@@ -20,7 +20,9 @@ import { MatExpansionModule, MatTableModule, MatCheckboxModule } from '@angular/
     MatSidenavModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatTabsModule,
@@ -32,7 +34,9 @@ import { MatExpansionModule, MatTableModule, MatCheckboxModule } from '@angular/
     MatExpansionModule,
     MatTableModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
