@@ -28,6 +28,20 @@ export class RestaurantService {
       })
     );
   }
+  getMenu() {
+    return this.afs.collection('menu')
+    .snapshotChanges()
+    .pipe(
+      map(changes => {
+        return changes.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return {id, ...data};
+        });
+      })
+    );
+
+  }
 }
 
 
