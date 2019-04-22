@@ -24,7 +24,7 @@ export class RestaurantItemComponent implements OnInit {
     });
   }
   showMenu(){
-    this.router.navigate(['menu'], {relativeTo: this.route});
+    this.router.navigate(['/menu']);
   }
 
 }
