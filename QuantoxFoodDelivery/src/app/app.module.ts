@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from 'src/environments/environment';
 
@@ -16,6 +17,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MenuComponent } from './components/restaurants/restaurant-item/menu/menu.component';
+import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
+import { LoginComponent } from './components/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { MenuComponent } from './components/restaurants/restaurant-item/menu/men
     routingComponents,
     DisplayComponent,
     NavBarComponent,
-    MenuComponent
+    MenuComponent,
+    SignUpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,8 @@ import { MenuComponent } from './components/restaurants/restaurant-item/menu/men
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

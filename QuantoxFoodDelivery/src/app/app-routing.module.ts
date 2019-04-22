@@ -5,10 +5,12 @@ import { RestaurantsComponent } from './components/restaurants/restaurants.compo
 import { OrdersComponent } from './components/orders/orders.component';
 import { HistoryComponent } from './components/history/history.component';
 import { MenuComponent } from './components/restaurants/restaurant-item/menu/menu.component';
+import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: 'restaurants', component: RestaurantsComponent},
   { path: 'menu', component: MenuComponent},
+  { path: 'signup', component: SignUpComponent},
   { path: 'orders', component: OrdersComponent },
   { path: 'history', component: HistoryComponent },
   {
