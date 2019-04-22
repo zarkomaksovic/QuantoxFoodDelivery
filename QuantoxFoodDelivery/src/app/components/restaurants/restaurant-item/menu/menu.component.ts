@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 
 export interface PeriodicElement {
@@ -16,7 +16,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 5, name: 'Kobasica', weight:' 100g',price:'200din'},
   {position: 6, name: 'Pica', weight: ' 100g',price:'200din'},
   {position: 7, name: 'Sendvic', weight: ' 100g',price:'200din'},
-  {position: 7, name: 'Sendvic', weight:' 100g',price:'200din'},
+  {position: 7, name: 'Buranija', weight:' 100g',price:'200din'},
   {position: 8, name: 'Giros', weight: ' 100g',price:'200din'},
   {position: 9, name: 'Burger', weight: ' 100g',price:'200din'},
   {position: 10, name: 'Pomfrit', weight: ' 100g',price:'200din'},
@@ -38,6 +38,7 @@ export class MenuComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
-//  export const {
-
-//  }
+export class Orders{
+  @Input() orders:{name:string,weight:string,price:number}
+     
+}
