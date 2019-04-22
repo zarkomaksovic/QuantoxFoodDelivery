@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import { MenuComponent } from './components/menu/menu.component';
+import { MenuComponent } from './components/restaurants/restaurant-item/menu/menu.component';
 
 @NgModule({
   declarations: [

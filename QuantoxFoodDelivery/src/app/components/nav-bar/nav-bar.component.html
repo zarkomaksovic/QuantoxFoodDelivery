@@ -2,20 +2,21 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar routerLink="/restaurants">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="restaurants">Restaurants</a>
-      <a mat-list-item routerLink="orders">Orders</a>
-      <a mat-list-item routerLink="history">History</a>
+      <a mat-list-item routerLink="/restaurants">Restaurants</a>
+      <a mat-list-item routerLink="/orders">Orders</a>
+      <a mat-list-item routerLink="/history">History</a>
+      <!-- <a mat-list-item routerLink="menu">Menu</a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" routerLink="/restaurants">menu</mat-icon>
       </button>
-      <h3>
+      <h3 routerLink="/restaurants">
         <span class='letter-color'>Q</span>uantox<span class='letter-color'>F</span>ood<span
           class='letter-color'>D</span>elivery
       </h3>
