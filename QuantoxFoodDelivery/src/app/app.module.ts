@@ -1,11 +1,13 @@
+import { AuthGuard } from './services/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { MenuComponent } from './components/restaurants/restaurant-item/menu/menu.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { LoginComponent } from './components/auth/login/login.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { LoginComponent } from './components/auth/login/login.component';
     AppRoutingModule,
     MaterialModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase, 'QuantoxFoodDelivery'),
     BrowserAnimationsModule,
     LayoutModule,
@@ -45,9 +49,10 @@ import { LoginComponent } from './components/auth/login/login.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
