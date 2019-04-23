@@ -1,7 +1,7 @@
 import {
   AngularFirestore } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
-import { Restaurant } from '../models/restaurant';
+import { Restaurant } from '../models/restaurant.model';
 import { map } from 'rxjs/operators';
 
 

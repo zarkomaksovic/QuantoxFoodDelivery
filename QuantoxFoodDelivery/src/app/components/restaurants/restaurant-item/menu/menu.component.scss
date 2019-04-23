@@ -7,6 +7,9 @@ mat-form-field{
     
   }
 }
+:host ::mat-focused{
+  color: green;
+}
 
 :host ::ng-deep  .mat-form-field-appearance-legacy,.mat-form-field-label{
     color: white;
@@ -15,7 +18,7 @@ mat-form-field{
       background-color: rgb(150, 202, 58);
     }
 }
-table{ 
+table{
   width: 100%;
   background-color: #ffffff4f;
   mat-expansion-panel{
@@ -35,4 +38,3 @@ table{
   padding-right: 24px;
   padding-left: 24px;
 }
- 
