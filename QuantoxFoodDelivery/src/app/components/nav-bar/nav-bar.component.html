@@ -22,13 +22,10 @@
       </h3>
       <div class="spacer"></div>
       <div class="button-position">
-        <button mat-button *ngIf='!isAuth' routerLink="/signup">
-          Sign up
-        </button>
-        <button mat-button *ngIf='!isAuth' routerLink="/login">
+        <button mat-button>
           Log in
         </button>
-        <button mat-button *ngIf='isAuth' (click)='onLogout()'>
+        <button mat-button>
           Log out
         </button>
       </div>

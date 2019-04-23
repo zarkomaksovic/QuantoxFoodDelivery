@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
 
 export interface PeriodicElement {
   name: string;
@@ -32,12 +31,6 @@ export class MenuComponent implements OnInit {
     // throw new Error('Method not implemented.');
   }
   displayedColumns: string[] = ['position', 'price'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource = ELEMENT_DATA;
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
 }
-//  export const {
-
-//  }

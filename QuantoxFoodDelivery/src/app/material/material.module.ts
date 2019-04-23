@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatSidenavModule} from '@angular/material/sidenav';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule} from '@angular/material/icon';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { MatTabsModule} from '@angular/material/tabs';
-import { MatGridListModule} from '@angular/material/grid-list';
-import { MatCardModule} from '@angular/material/card';
-import { MatExpansionModule, MatTableModule, MatCheckboxModule, MatFormFieldModule, MatInputModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { MatExpansionModule, MatTableModule, MatCheckboxModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [],
@@ -20,10 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSidenavModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FlexLayoutModule
+    MatCardModule
   ],
   exports: [
     MatTabsModule,
@@ -35,10 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatExpansionModule,
     MatTableModule,
     MatCheckboxModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FlexLayoutModule
+    MatCardModule
   ]
 })
 export class MaterialModule { }

@@ -1,23 +1,4 @@
-mat-form-field{
-  width:100%;
-  margin-bottom: 10px;
-  color: white;
-  mat-placeholder,mat-hint{
-    color: white;
-  }
-}
-:host ::mat-focused{
-  color: green;
-}
-
-:host ::ng-deep  .mat-form-field-appearance-legacy,.mat-form-field-label{
-    color: white;
-    padding: 10px;
-     .mat-form-field-underline{
-      background-color: rgb(150, 202, 58);
-    }
-}
-table{
+table{ 
   width: 100%;
   background-color: #ffffff4f;
   mat-expansion-panel{
