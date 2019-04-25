@@ -1,19 +1,19 @@
 <p>
   orders works!
 </p>
-<p *ngFor="let menu of menu">{{ menu.id }}</p>
+<p *ngFor="let menu of menu">{{ id.name }}</p>
 <!-- <app-menu></app-menu> -->
 
-<mat-table [dataSource]="menu" class="mat-elevation-z8" matSort>
+<mat-table [dataSource]="id" class="mat-elevation-z8" matSort>
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
     <mat-cell *matCellDef="let element">
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title>{{ element.name }}</mat-panel-title>
+            <mat-panel-title>{{ id.name }}</mat-panel-title>
           </mat-expansion-panel-header>
-          <mat-checkbox color="warn">Kecap</mat-checkbox>
+          <mat-checkbox color="warn" value='kecap'>Kecap</mat-checkbox>
           <mat-checkbox color="warn">Majonez</mat-checkbox>
           <mat-checkbox color="warn">Urnebes</mat-checkbox>
           <mat-checkbox color="warn">Luk</mat-checkbox>
@@ -28,11 +28,11 @@
   </ng-container>
   <ng-container matColumnDef="weight">
     <mat-header-cell *matHeaderCellDef>Weight</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{ element.weight }}</mat-cell>
+    <mat-cell *matCellDef="let element">{{ id.weight }}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="price">
     <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{ element.price }}</mat-cell>
+    <mat-cell *matCellDef="let element">{{ id.price }}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -1,5 +1,5 @@
 import { MatTableDataSource } from '@angular/material';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
@@ -9,18 +9,22 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
 })
 export class OrdersComponent implements OnInit {
 
-  menu: {};
+  @Output() menu: {};
   displayedColumns = ['name', 'weight', 'price'];
   dataSource = new MatTableDataSource();
-
+  id;
   constructor(
     private restaurantService: RestaurantService
     ) { }
 
   ngOnInit() {
     this.restaurantService.getMenu().subscribe(menu => {
-      this.menu = menu;
-      this.dataSource.data = menu;
+      this.menu = menu.map(id => {
+        this.id = id;
+        return id;
+      });
+      this.dataSource.data = this.id;
+      console.log(this.id);
     });
   }
 

@@ -9,6 +9,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   authChange = new Subject<boolean>();
   private isAuthenticated = false;
+  errorDisplay: string;
 
   constructor(private router: Router, private afAuth: AngularFireAuth) {}
 
@@ -29,12 +30,11 @@ export class AuthService {
     this.afAuth.auth.createUserWithEmailAndPassword(
       authData.email,
       authData.password
-      ).then(result => {
-        console.log(result);
-
-      })
-      .catch( error => {
-        console.log(error);
+      )
+      .catch(error => {
+        // Handle Errors here.
+        this.errorDisplay = error.message;
+        console.log(this.errorDisplay);
       });
   }
 

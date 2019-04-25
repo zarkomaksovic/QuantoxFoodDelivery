@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
+import { errorHandler } from '@angular/platform-browser/src/browser';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,10 +9,10 @@ import { AuthService } from '../../../services/auth.service';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
   constructor(private authService: AuthService) { }
-
+   err: any;
   ngOnInit() {
+
   }
 
   onSubmit(form: NgForm) {
@@ -19,5 +20,8 @@ export class SignUpComponent implements OnInit {
     email: form.value.email,
     password: form.value.password
   });
+  this.err = this.authService.errorDisplay;
+  console.log('submin',this.err)
   }
+
 }

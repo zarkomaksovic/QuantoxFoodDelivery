@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { RestaurantService } from './../../services/restaurant.service';
+import { OrdersComponent } from './../orders/orders.component';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-history',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history.component.sass']
 })
 export class HistoryComponent implements OnInit {
+  constructor(private menuService: RestaurantService) { }
 
-  constructor() { }
+  menu: any;
 
   ngOnInit() {
+    this.menu = this.menuService.getMenu()
+    .subscribe(menu => {
+      this.menu = menu;
+      console.log(menu);
+    });
   }
 
 }
